@@ -23,7 +23,8 @@ use that same key again.  To do this (i.e., login from remote host1 to remote ho
 machine):
 
 scp your local id_rsa.pub file to host1 as xxx_rsa.pub.  This requires no password.
-ssh to host2 via:
+
+ssh to host2 from host1 using the key you just copied like this:
 ```
   ssh -i xxx_rsa.pub host2
 ```
