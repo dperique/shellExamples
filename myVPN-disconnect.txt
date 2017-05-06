@@ -1,0 +1,4 @@
+tell application "Tunnelblick"
+	disconnect "myVPN"
+	get state of first configuration where name = "myVPN"
+end tell

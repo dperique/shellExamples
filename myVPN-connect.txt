@@ -1,0 +1,8 @@
+tell application "Tunnelblick"
+	connect "myVPN"
+	get state of first configuration where name = "myVPN"
+	repeat until result = "CONNECTED"
+		delay 1
+		get state of first configuration where name = "myVPN"
+	end repeat
+end tell
