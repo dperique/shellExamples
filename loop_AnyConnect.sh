@@ -12,5 +12,6 @@
 while [ 1 ] ; do
   /opt/cisco/anyconnect/bin/vpn disconnect
   /opt/cisco/anyconnect/bin/vpn connect AMERICA
-  sleep 30
+  # sleep for 5 hours (18000 seconds)
+  sleep 18000
 done
