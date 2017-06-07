@@ -50,4 +50,11 @@ ssh-rsa ...blah...blah...blah... Dennis.Periquet@whatever.this.that
 ```
 You should now be able to ssh as root to your VM.
 
+# Reduce question when you ssh to another machine
 
+Insert this into your .ssh/config
+```
+UserKnownHostsFile=/dev/null
+StrictHostKeyChecking=no
+LogLevel=ERROR
+```
