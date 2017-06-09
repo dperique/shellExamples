@@ -58,3 +58,11 @@ UserKnownHostsFile=/dev/null
 StrictHostKeyChecking=no
 LogLevel=ERROR
 ```
+
+# You keep getting Permission denied (publickey) -- how to solve
+
+Your permissions on .ssh and/or .ssh/authorized_keys is too open.  Do this as the user to which you want to ssh login:
+```
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+```
