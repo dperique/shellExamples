@@ -42,11 +42,11 @@ Here's the command:
 ```
 ssh -L 9099:localhost:9090 ubuntu@my-svc-host
 ```
-Thing of the -L as saying the next parameter is the port on my local machine.
+Think of the -L as saying the next parameter is the port on my local machine.
 
 my-svc-host is the host where the service is running at localhost:9090.  You ssh
 to that host, say as ubuntu, you specify the port the service is running on 9090 and
 then the port you want to forward that port to your local laptop as 9099.
 
-Now, you can goto your laptop and run http://localhost:9090
+Now, you can goto your laptop and run http://localhost:9099
 
