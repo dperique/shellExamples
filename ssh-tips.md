@@ -50,7 +50,7 @@ ssh-rsa ...blah...blah...blah... Dennis.Periquet@whatever.this.that
 ```
 You should now be able to ssh as root to your VM.
 
-# Reduce question when you ssh to another machine
+# Remove question when you ssh to another machine
 
 Insert this into your .ssh/config
 ```
@@ -65,15 +65,5 @@ Your permissions on .ssh and/or .ssh/authorized_keys is too open.  Do this as th
 ```
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
-```
-
-# Disallow port 22 (ssh), port 80 (http), and port 443 (https), allow only your IP address
-
-Sometimes you want to start services on a public machine but only want your IP address to access it.  Add these iptables rules to make it happen.  Note this assumes a clean iptables state (accomplished via 'iptables -F').  Please do not use these commands if you don't know what you're doing as it can lock you out of your machine.  The IP address used below in the first line is arbitrary, please use the relevant one for you.
-```
-iptables -A INPUT -i eth1 -s 198.116.199.88 -j ACCEPT
-iptables -A INPUT -i eth1 -p tcp --destination-port 22 -j DROP
-iptables -A INPUT -i eth1 -p tcp --destination-port 80 -j DROP
-iptables -A INPUT -i eth1 -p tcp --destination-port 443 -j DROP
 ```
 
