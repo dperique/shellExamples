@@ -2,8 +2,6 @@ Sometimes we want to ensure that a particular function gets run when
 a script exits.  For example, you want to do some cleanup on exit and
 don't want to have to put cleanup logic into the main logic of your script.
 
-I used this for inspiration: http://redsymbol.net/articles/bash-exit-traps/
-
 ```
 #!/bin/bash
 function cleanup {
