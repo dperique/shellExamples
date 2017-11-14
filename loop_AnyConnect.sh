@@ -4,14 +4,18 @@
 # disconnects.  This means you don't get mail, etc. and you have to connect
 # again.  And if you use the GUI app, you have to mouse it, etc.
 #
-# My solution is to just disconnect it and connect it in a predictable way
-# so that it will always be available except for that small window where we
-# disconnect it.  This was the simplest solution as I didn't feel like adding
-# logic to do checks so we can re-connect only if disconnected.
-#
-while [ 1 ] ; do
-  /opt/cisco/anyconnect/bin/vpn disconnect
-  /opt/cisco/anyconnect/bin/vpn connect AMERICA
-  # sleep for 5 hours (18000 seconds)
-  sleep 18000
+while : ; do
+
+  # inside loop: ensure connection is up every 2 minutes
+  while : ; do
+    /opt/cisco/anyconnect/bin/vpn status 2>&1 | grep -q -i " disconnected" && break
+
+    # if we got here, conection is up
+    sleep 120
+  done
+
+  # /opt/cisco/anyconnect/bin/vpn disconnect
+  echo connecting...
+  /opt/cisco/anyconnect/bin/vpn connect AMERICA || :
+  sleep 20
 done
