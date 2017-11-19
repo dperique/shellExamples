@@ -51,10 +51,12 @@ In there I talk about:
 [tunneling over ssh (to get around some networking connectivity challenges)]: https://github.com/dperique/shellExamples/blob/master/network-tips.md#do-port-forwarding-over-ssh-tunnel
 
 # SSH tips
-Here, I put a few tips I found in ssh to help using it in convenient ways.
+In [ssh tips] put a few tips I found in ssh to help using it in convenient ways.
+[ssh tips]: https://github.com/dperique/shellExamples/blob/master/ssh-tips.md
 
 # Traps and bash
-In here, I have an example of how to write a trap in bash and how to use it to call some
+In [traps and bash], I have an example of how to write a trap in bash and how to use it to call some
 cleanup function regardless if a test passes or fails. This can come in handy in test automation
 where you want to clean up a resource before giving it back.
+[traps and bash]: https://github.com/dperique/shellExamples/blob/master/traps_and_bash.md
 
