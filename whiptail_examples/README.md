@@ -2,10 +2,11 @@
 
 The [whiptail](https://pkgs.org/download/whiptail) tool is good for fancy dialog
 boxes in bash.  It seems pretty simple but really can dress up your bash code
-especially when you want to make it aesthetically pleasing, inviting, and less
-scary for people like in an Operations team who have a great aversion to complexity.
+especially when you want to make your bash application aesthetically pleasing,
+inviting, and less scary for people like members of an Operations team who have
+a great aversion to complexity.
 
-Note the peculiar use of `3>&1 1>&2 2>&3` -- this is because the output goes to stderr.
+Note the peculiar use of `3>&1 1>&2 2>&3` -- this is because the output goes to `stderr`.
 
 Installation on debian style Linux:
 
