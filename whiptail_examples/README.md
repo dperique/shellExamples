@@ -18,7 +18,7 @@ sudo dnf install newt
 
 Examples:
 
-* [yes/no dialogbox](yes-no.sh)
-* [press enter to continue dialogbox](continue.sh)
-* [radio box](radio.sh)
-* [get input](get_input.sh)
+* [yes/no dialogbox](scripts/yes-no.sh)
+* [press enter to continue dialogbox](scripts/continue.sh)
+* [radio box](scripts/radio.sh)
+* [get input](scripts/get_input.sh)
